@@ -73,7 +73,7 @@ class AppTextStyles {
   static TextStyle montserratH6Regular = const TextStyle(
     fontWeight: FontWeight.w400,
     fontFamily: montserrat,
-    fontSize: 13,
+    fontSize: 14,
     color: AppColors.black,
   );
 

@@ -58,6 +58,9 @@ class _ExerciseThreePageState extends State<ExerciseThreePage> {
             );
           },
         ),
+        SizedBox(
+          height: 20,
+        ),
         AnswerButton(
           answer: 'b)       43',
           correctAnswer: correctAnswer,
@@ -74,6 +77,9 @@ class _ExerciseThreePageState extends State<ExerciseThreePage> {
               correctAnswer: correctAnswer,
             );
           },
+        ),
+        SizedBox(
+          height: 20,
         ),
         AnswerButton(
           answer: 'c)       44',
