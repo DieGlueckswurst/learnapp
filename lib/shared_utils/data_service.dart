@@ -4,27 +4,44 @@ import 'package:provider/provider.dart';
 import '../data/provider/data_provider.dart';
 
 class DataServcice {
-  static Future<void> incrementAmoundOfClicks({
+  static Future<void> setAnswer({
     required BuildContext context,
+    required String answer,
+    required String correctAnswer,
   }) async {
-    await Future.delayed(
-      Duration(
-        milliseconds: 1000,
-      ),
-    );
     Provider.of<DataProvider>(
       context,
       listen: false,
-    ).incrementAmoundOfClicks();
+    ).setCurrentAnswer(
+      correctAnswer,
+      answer,
+    );
   }
 
-  static int getAmoundOfClicks({
+  static int getCorrectAnswersCounter({
     required BuildContext context,
-    required bool listen,
   }) {
     return Provider.of<DataProvider>(
       context,
-      listen: listen,
-    ).amoundOfClicks;
+    ).correctAnswersCounter;
+  }
+
+  static String getCurrentAnswerForQuestion({
+    required BuildContext context,
+    required int questionIndex,
+  }) {
+    return Provider.of<DataProvider>(
+      context,
+    ).correctAnswersWithCurrentAnswers.values.toList()[questionIndex];
+  }
+
+  static String getCorrectAnswerForQuestion({
+    required BuildContext context,
+    required int questionIndex,
+  }) {
+    return Provider.of<DataProvider>(
+      context,
+      listen: false,
+    ).correctAnswersWithCurrentAnswers.keys.toList()[questionIndex];
   }
 }

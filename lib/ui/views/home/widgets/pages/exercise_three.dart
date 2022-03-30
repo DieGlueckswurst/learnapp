@@ -1,22 +1,22 @@
-import 'package:boilerplate/shared_utils/data_service.dart';
-import 'package:boilerplate/ui/shared_widgets/page_view_scaffold.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../../shared_utils/data_service.dart';
 import '../../../../shared_widgets/buttons/answer_button.dart';
+import '../../../../shared_widgets/page_view_scaffold.dart';
 
-class ExerciseOnePage extends StatefulWidget {
+class ExerciseThreePage extends StatefulWidget {
   final int questionIndex;
 
-  const ExerciseOnePage({
+  const ExerciseThreePage({
     Key? key,
     required this.questionIndex,
   }) : super(key: key);
 
   @override
-  _ExerciseOnePageState createState() => _ExerciseOnePageState();
+  _ExerciseThreePageState createState() => _ExerciseThreePageState();
 }
 
-class _ExerciseOnePageState extends State<ExerciseOnePage> {
+class _ExerciseThreePageState extends State<ExerciseThreePage> {
   bool correctAnswerWasTapped = false;
 
   @override
@@ -29,14 +29,20 @@ class _ExerciseOnePageState extends State<ExerciseOnePage> {
       context: context,
       questionIndex: widget.questionIndex,
     );
-
     return PageScaffold(
       children: [
+        Text('Löse die Textaufgabe \n'),
+        SizedBox(
+          height: 200,
+          child: Image.asset(
+            'assets/images/thomas.jpg',
+          ),
+        ),
         Text(
-          'Addiere: 46 + 24 = \n',
+          '\nThomas ist in der Klasse 2a. Er sammelt Murmeln. Thomas hat bereits 35 Murmeln. Am Samstag erhält er acht neue Murmeln. Wie viele Murmeln hat Thomas nun?\n',
         ),
         AnswerButton(
-          answer: 'a)       70',
+          answer: 'a)       42',
           correctAnswer: correctAnswer,
           currentAnswer: currentAnswer,
           onAnswerTapped: (answer) {
@@ -53,7 +59,7 @@ class _ExerciseOnePageState extends State<ExerciseOnePage> {
           },
         ),
         AnswerButton(
-          answer: 'b)       80',
+          answer: 'b)       43',
           correctAnswer: correctAnswer,
           currentAnswer: currentAnswer,
           onAnswerTapped: (answer) {
@@ -70,7 +76,7 @@ class _ExerciseOnePageState extends State<ExerciseOnePage> {
           },
         ),
         AnswerButton(
-          answer: 'c)       60',
+          answer: 'c)       44',
           correctAnswer: correctAnswer,
           currentAnswer: currentAnswer,
           onAnswerTapped: (answer) {

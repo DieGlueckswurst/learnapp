@@ -1,6 +1,11 @@
 import 'package:boilerplate/ui/views/home/widgets/custom_app_bar.dart';
 import 'package:boilerplate/ui/views/home/widgets/pages/addition_page.dart';
+import 'package:boilerplate/ui/views/home/widgets/pages/exercise_five.dart';
+import 'package:boilerplate/ui/views/home/widgets/pages/exercise_four.dart';
 import 'package:boilerplate/ui/views/home/widgets/pages/exercise_one.dart';
+import 'package:boilerplate/ui/views/home/widgets/pages/exercise_three.dart';
+import 'package:boilerplate/ui/views/home/widgets/pages/exercise_two.dart';
+import 'package:boilerplate/ui/views/home/widgets/pages/result_page.dart';
 import 'package:boilerplate/ui/views/home/widgets/pages/start_page.dart';
 import 'package:boilerplate/ui/views/home/widgets/pages/subtraction_page.dart';
 import 'package:flutter/material.dart';
@@ -40,7 +45,22 @@ class _HomeViewState extends State<HomeView> {
                   StartPage(),
                   AdditionPage(),
                   SubtractionPage(),
-                  ExerciseOnePage(),
+                  ExerciseOnePage(
+                    questionIndex: 0,
+                  ),
+                  ExerciseTwoPage(
+                    questionIndex: 1,
+                  ),
+                  ExerciseThreePage(
+                    questionIndex: 2,
+                  ),
+                  ExerciseFourPage(
+                    questionIndex: 3,
+                  ),
+                  ExerciseFivePage(
+                    questionIndex: 4,
+                  ),
+                  ResultPage(),
                 ],
               ),
             ),

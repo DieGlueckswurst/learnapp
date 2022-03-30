@@ -1,22 +1,22 @@
-import 'package:boilerplate/shared_utils/data_service.dart';
-import 'package:boilerplate/ui/shared_widgets/page_view_scaffold.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../../shared_utils/data_service.dart';
 import '../../../../shared_widgets/buttons/answer_button.dart';
+import '../../../../shared_widgets/page_view_scaffold.dart';
 
-class ExerciseOnePage extends StatefulWidget {
+class ExerciseTwoPage extends StatefulWidget {
   final int questionIndex;
 
-  const ExerciseOnePage({
+  const ExerciseTwoPage({
     Key? key,
     required this.questionIndex,
   }) : super(key: key);
 
   @override
-  _ExerciseOnePageState createState() => _ExerciseOnePageState();
+  _ExerciseTwoPageState createState() => _ExerciseTwoPageState();
 }
 
-class _ExerciseOnePageState extends State<ExerciseOnePage> {
+class _ExerciseTwoPageState extends State<ExerciseTwoPage> {
   bool correctAnswerWasTapped = false;
 
   @override
@@ -29,14 +29,13 @@ class _ExerciseOnePageState extends State<ExerciseOnePage> {
       context: context,
       questionIndex: widget.questionIndex,
     );
-
     return PageScaffold(
       children: [
         Text(
-          'Addiere: 46 + 24 = \n',
+          'Subtrahiere: 92 - 47 = \n',
         ),
         AnswerButton(
-          answer: 'a)       70',
+          answer: 'a)       35',
           correctAnswer: correctAnswer,
           currentAnswer: currentAnswer,
           onAnswerTapped: (answer) {
@@ -53,7 +52,7 @@ class _ExerciseOnePageState extends State<ExerciseOnePage> {
           },
         ),
         AnswerButton(
-          answer: 'b)       80',
+          answer: 'b)       55',
           correctAnswer: correctAnswer,
           currentAnswer: currentAnswer,
           onAnswerTapped: (answer) {
@@ -70,7 +69,7 @@ class _ExerciseOnePageState extends State<ExerciseOnePage> {
           },
         ),
         AnswerButton(
-          answer: 'c)       60',
+          answer: 'c)       45',
           correctAnswer: correctAnswer,
           currentAnswer: currentAnswer,
           onAnswerTapped: (answer) {
